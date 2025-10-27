@@ -37,7 +37,7 @@ for (let i = 0; i < 6; i++) {
      console.log(image);
 
      // riporto il contenuto della card e ne cambio le proprietà
-     let card = `<div class="col-md-4"> 
+     let card = `<div class="col-sm-12 col-md-6 col-lg-4"> 
                      <div id="genera" class="card box-shadow mb-3">
                        <div class="row g-0">
                          <img class="puntina" src="./assets/img/pin.svg">
