@@ -10,6 +10,10 @@ const url = "https://lanciweb.github.io/demo/api/pictures/"
 // seleziono gli elementi della DOM
 const generaEl = document.getElementById("genera")
 
+// creo una variabile  vuota che servirà a contenere tutte le cards
+
+let ricordi = ""
+
 // richiamo i dati con una chiamata AJAX all'API
 axios.get(url)
 .then((res) => {
@@ -33,7 +37,7 @@ for (let i = 0; i < 6; i++) {
      console.log(image);
 
      // riporto il contenuto della card e ne cambio le proprietà
-     let card = `<div class="col-md-4">
+     let card = `<div class="col-md-4"> 
                      <div id="genera" class="card box-shadow mb-3">
                        <div class="row g-0">
                          <img class="puntina" src="./assets/img/pin.svg">
@@ -46,8 +50,10 @@ for (let i = 0; i < 6; i++) {
                      </div>
                    </div>`
 
+ricordi += card;
 }
-
+//stampo a schermo le cards
+generaEl.innerHTML = ricordi
 })
 
 

@@ -41,7 +41,6 @@ header {height: 150px;
         align-items: center;}
 
 /* main */
-main {height: 800px;
-      background-image: url("../img/cork.png");}
+main {background-image: url("../img/cork.png");}
 
 
