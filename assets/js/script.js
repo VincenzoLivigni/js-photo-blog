@@ -6,8 +6,9 @@ sfruttando la risposta per generare dinamicamente in pagina una serie di foto!
 
 // creo una variabile dove riporto l'url dell'API
 const url = "https://lanciweb.github.io/demo/api/pictures/"
+
 // seleziono gli elementi della DOM
-const genera = document.getElementById("genera")
+const generaEl = document.getElementById("genera")
 
 // richiamo i dati con una chiamata AJAX all'API
 axios.get(url)
@@ -30,13 +31,23 @@ for (let i = 0; i < 6; i++) {
           
      let image = obj.url
      console.log(image);
+
+     // riporto il contenuto della card e ne cambio le proprietà
+     let card = `<div class="col-md-4">
+                     <div id="genera" class="card box-shadow mb-3">
+                       <div class="row g-0">
+                         <img class="puntina" src="./assets/img/pin.svg">
+                         <img src=${image} class="card-img-top pt-2 px-2" alt="...">
+                           <div class="card-body">
+                             <h6 class="card-subtitle mb-1 text-body-secondary">${giorno}</h6>
+                             <h4>${titolo}</h4>
+                           </div>
+                       </div>
+                     </div>
+                   </div>`
+
 }
 
 })
 
-
-
-// richiamo il contenuto della card
-
-// cambio le proprietà delle card
 
