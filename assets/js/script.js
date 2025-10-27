@@ -15,9 +15,26 @@ axios.get(url)
 console.log(res);
 const datiCards = res.data;
 console.log(datiCards);
-})
 
 // ciclo per poter prendere gli oggetti singoli
+for (let i = 0; i < 6; i++) {
+     const obj = datiCards[i];
+     console.log(obj);
+
+     // prendo le singole proprietà
+     let titolo = obj.title
+     console.log(titolo);
+
+     let giorno = obj.date
+     console.log(giorno);
+          
+     let image = obj.url
+     console.log(image);
+}
+
+})
+
+
 
 // richiamo il contenuto della card
 
