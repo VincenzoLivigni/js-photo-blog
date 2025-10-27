@@ -5,10 +5,28 @@
        box-sizing: border-box;
 }
 
-h1 {font-size: 4rem;        
-    font-family: "Edu Tas Beginner", sans-serif;
-    font-weight: 900;
+h1, h4 {font-family: "Edu Tas Beginner", sans-serif;
+        font-weight: bolder;
 }
+
+h1 {font-size: 4rem;}
+
+h6 {font-family: "Sometype Mono", monospace;
+    font-size: 0.8rem;}
+
+img {max-width: 100%;}
+
+
+/* utils */
+.container {width: 60%;}
+
+
+
+/* main utils */
+.card {border-radius: 0%;
+       padding: 5px;
+       box-shadow: 2px 2px #858585;}
+
 
 /* header */
 header {height: 150px;
@@ -16,3 +34,9 @@ header {height: 150px;
         display: flex;
         justify-content: center;
         align-items: center;}
+
+/* main */
+main {height: 800px;
+      background-image: url("../img/cork.png");}
+
+
