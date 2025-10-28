@@ -52,11 +52,15 @@ img {
         width: 60%;
 }
 
+.container img:hover {transform: scale(1.2) rotate(10deg);
+                      cursor: pointer;
+                      }
+
 /* main utils */
 .card {
         border-radius: 0%;
         padding: 5px;
-        box-shadow: 2px 2px #858585;
+        box-shadow: 2px 2px #666666;
         position: relative;
 }
 
