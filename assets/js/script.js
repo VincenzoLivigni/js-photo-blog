@@ -8,7 +8,9 @@ sfruttando la risposta per generare dinamicamente in pagina una serie di foto!
 const url = "https://lanciweb.github.io/demo/api/pictures/"
 
 // seleziono gli elementi della DOM
-const generaEl = document.getElementById("genera")
+const generaEl = document.getElementById("genera");
+const overlayEl = document.getElementById("overlay")
+const btnOverlayEl = document.getElementById("btnOverlay")
 
 // creo una variabile  vuota che servirà a contenere tutte le cards
 let ricordi = ""
@@ -52,8 +54,25 @@ for (let i = 0; i < 6; i++) {
 ricordi += card;
 }
 
+// creo un evento che al click di una delle foto compare loverlay
+generaEl.addEventListener("click", () => {
+    overlayEl.style.display = "block"
+});
+
+// creo un evento che al click del bottone l'overlay scompare
+btnOverlayEl.addEventListener("click", () => {
+   overlayEl.style.display = "none";
+})
+
 //stampo a schermo le cards
 generaEl.innerHTML = ricordi
 })
 
+/*
+Milestone 2
 
+Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none [✓]
+Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia. [✓]
+Cliccando invece il button di chiusura, l’overlay scompare nuovamente. [✓]
+Centratura overlay [✓]
+*/ 
